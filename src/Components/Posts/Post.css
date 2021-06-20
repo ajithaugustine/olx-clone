@@ -1,7 +1,7 @@
 .moreView {
-  margin: 16px 16px 24px;
-  padding: 16px 16px 32px;
-  background-color: #ebeeef;
+  margin: 16px 16px 16px 16px;
+  padding: 16px 16px 16px 16px;
+  background-color: #f0f0f0;
   border-radius: 4px;
 }
 
@@ -21,25 +21,69 @@
   color: #002f34;
 }
 
-.recommendations .cards {
-  display: flex;
-}
-
 .moreView .cards {
-  white-space: nowrap;
-  overflow-x: scroll;
-  overflow-y: hidden;
+  height: 30pc;
+  overflow-y:scroll;
+  overflow-x:hidden;
 }
+.cards::-webkit-scrollbar {
+    width: 7.5px;
+  }
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(0, 0, 0); 
+    
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+   
+    background: #f00505; 
+  }
+
+  .postParentDiv .cards{
+   padding:10px 0px 10px 10px;
+  }
+
 
 .card {
-  margin-right: 15px;
-  padding: 13px;
-  max-width: 222px;
-  width: 222px;
-  height: 270px;
-  display: inline-block;
+  padding:10px;
+  border-radius: 5px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  max-width: 500px;
+  height: 300px;
   cursor: pointer;
 }
+@media screen and (max-width: 1500px) {
+  .card {
+   width: 19%;
+
+  }}
+@media screen and (max-width: 1300px) {
+  .card {
+   width: 23.8%;
+
+  }}
+@media screen and (max-width: 1000px) {
+  .card {
+   width: 31.5%;
+
+  }}
+@media screen and (max-width: 800px) {
+  .card {
+   width: 47.5%;
+
+  }}
+  @media screen and (max-width: 500px) {
+    .card {
+     width: 100%;
+    }}
 
 .card .favorite {
   display: flex;

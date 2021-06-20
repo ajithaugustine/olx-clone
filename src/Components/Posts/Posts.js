@@ -30,12 +30,14 @@ setproducts(allpost)
         <div className="heading">
           <span>Quick Menu</span>
           <span>View more</span>
-        </div>
-        <div className="cards">
-
+        </div>  
+        
+       
+        <div className="cards row ">
     {
         products.map((product)=>{
-         return <div className="card" onClick={()=>{
+         return <div
+           className="card " onClick={()=>{
           setpostdetailes(product)
           history.push('/view')
          }}>
@@ -56,6 +58,10 @@ setproducts(allpost)
         </div>   })
     }
         </div>
+
+    
+    
+        
       </div>
       <div className="recommendations">
         <div className="heading">

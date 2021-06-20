@@ -9,6 +9,10 @@
     border-radius: 6px;
     z-index: 2;
   }
+  .loginParentDiv img{
+    margin-left: 2.3pc;
+  }
+
   
   .loginParentDiv .input {
     border-top-color: transparent;

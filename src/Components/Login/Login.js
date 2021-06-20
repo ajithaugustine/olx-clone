@@ -22,7 +22,7 @@ function Login() {
   return (
     <div>
       <div className="loginParentDiv">
-        <img width="200px" height="200px" src={Logo}></img>
+        <img width="100px" height="100px" src={Logo}></img>
         <form onSubmit={Login}>
           <label htmlFor="fname">Email</label>
           <br />
