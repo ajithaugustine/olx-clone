@@ -47,7 +47,7 @@ function Header() {
         </div> */}
       
         <div className="loginPage">
-          {user ? <h6>{user.displayName}</h6>:<Link to='/login'>Login</Link> }
+          {user ?<Link to={`/profile/${user.uid}`}><h6>{user.displayName}</h6></Link> :<Link to='/login'>Login</Link> }
         </div>
         <div >
           {user?<a id='signout'onClick={signout}>Signout</a> :<Link id='Signup' to='/signup'>Signup</Link> }     

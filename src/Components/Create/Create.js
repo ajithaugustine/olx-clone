@@ -11,11 +11,13 @@ const Create = () => {
   const [category, setcategory] = useState('')
   const [price, setprice] = useState('')
   const [image, setimage] = useState('')
+  const [uploading, setuploading] = useState(false)
   const {firebase} = useContext(FirebaseContext)
   const {user} = useContext(AuthContext)
   const date = new Date()
   const handleSubmit=(e)=>{
     e.preventDefault()
+    setuploading(true)
     firebase.storage().ref(`/image/${image.name}`).put(image).then(({ref})=>{
       ref.getDownloadURL().then((url)=>{
      console.log(url)
@@ -26,11 +28,15 @@ const Create = () => {
        url,
        userId:user.uid,
        createdAt:date.toDateString()
-     }).then(()=> alert('success'))
+     }).then(()=> 
+     alert('success'))
+     setuploading(false)
      history.push('/')
       })
     }).catch((err)=>{
+      setuploading(false)
       alert(err.message)
+      
     })
   }
   return (
@@ -80,7 +86,7 @@ const Create = () => {
               onChange={(e)=>setimage(e.target.files[0])}
               type="file" />
             <br />
-            <button className="uploadBtn">upload and Submit</button>
+           {uploading?<button className='uploadBtn'disabled>uploading</button>: <button className='uploadBtn'> Submit</button>}
           </form>
         </div>
       </div>
