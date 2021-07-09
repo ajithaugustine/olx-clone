@@ -1,12 +1,13 @@
-import React,{useContext} from 'react'
-import { Route,Link,useRouteMatch,Switch} from 'react-router-dom'
+import React,{useContext,useState} from 'react'
+import { Link,useParams} from 'react-router-dom'
 import { AuthContext } from '../../store/Context';
 import Userdetails from './Userdetails'
 import Userproducts from './Userproducts'
 import './UserProfile.css'
 function UserProfile() {
+    const [state, setstate] = useState(true)
     const {user} = useContext(AuthContext)
-    const{path,url}= useRouteMatch()
+   const {id}=useParams()
     return (
         <div >
             <div className="container-fluid">
@@ -15,18 +16,16 @@ function UserProfile() {
                         <h5>{user.displayName}</h5>
                    
                    <ul className='profilelist'>
-                       <li><Link id='profilelinks' to={url}>userdetails</Link> </li>
-                       <li><Link id='profilelinks' to={`${url}/userproducts`}>products</Link> </li>
+                       <li><Link id='profilelinks'onClick={()=>setstate(true)} >userdetails</Link> </li>
+                       <li><Link id='profilelinks' onClick={()=>setstate(false)}>products</Link> </li>
                       
                    </ul>
 
                     </div>
                     <div className="contents col-9">
-                    <Switch>
-                        <Route exact path={path}><Userdetails userid={user.uid}/></Route>
-                        <Route path={`${path}/userproducts`}><Userproducts userid={user.uid}/></Route>
-                    </Switch>
-
+                   
+                       {state? <div><Userdetails userid={id}/></div> :<div ><Userproducts userid={id} /></div>}
+                        
                     </div>
 
                 </div>
