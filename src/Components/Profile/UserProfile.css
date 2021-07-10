@@ -1,0 +1,91 @@
+.container-fluid{
+    padding:70px 0px 10px 10px;
+}
+.row{
+    min-height: 25pc;
+   max-height: 28pc;
+    justify-content: center;
+    padding:10px;
+}
+.dashbord{
+border-radius: 10px;
+padding: 10px;
+margin-right: 25px;
+background-color: #e9e7e6;
+text-align: center;
+box-shadow: -2px -2px  9px rgb(30, 134, 117);;
+text-transform: capitalize;
+}
+.contents{
+ border-radius: 10px;
+padding: 10px;
+background-color: #e9e7e6;
+text-align: center;
+box-shadow: 1px 1px  9px rgb(30, 134, 117);;
+}
+.profilelist{
+    list-style-type: none;
+    margin: 0;
+    padding:0;
+    line-height: 50px;
+   
+}
+#profilelinks{
+    text-decoration: none;
+    font-weight: 700;
+   color: rgb(16, 135, 172);
+    padding: 10px;
+
+    width: 10px;
+   
+}
+#profilelinks:hover{
+    font-weight: 700;
+  color: rgb(0, 195, 255);
+   
+}
+.moreView1 .cards {
+    max-height: 20pc;
+    overflow-y:scroll;
+    overflow-x:hidden;
+  }
+  .Card{
+      background-color: rgb(255, 255, 255);
+    padding:10px;
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    max-width: 500px;
+    height: 300px;
+    cursor: pointer;
+  }
+  .card .image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .Card .image img {
+    height: 100px;
+    max-width: 100%;
+    max-height: 100%;
+    min-height: 100%;
+    text-align: center;
+  }
+  .Card .content .rate {
+    margin-top: 10px;
+    font-size: larger;
+    font-weight: bold;
+  }
+  .Card .content .kilometer {
+    font-size: medium;
+  }
+  .Card .content .name {
+    font-size: medium;
+    color: crimson;
+  }
+  .Card .date {
+    display: flex;
+    justify-content: flex-end;
+    font-size: small;
+  }

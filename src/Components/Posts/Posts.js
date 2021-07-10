@@ -16,7 +16,7 @@ function Posts() {
     const allpost = snapshot.docs.map((product)=>{
       return{
         ...product.data(),
-        id:product.id
+        
     }})
 setproducts(allpost)
 
@@ -49,13 +49,13 @@ setproducts(allpost)
           </div>
           <div className="content">
             <p className="rate">&#x20B9; {product.price}</p>
-            <span className="kilometer">{product.category}</span>
             <p className="name"> {product.Productname}</p>
+            <p className="category"> {product.category}</p>
           </div>
           <div className="date">
             <span>{product.createdAt}</span>
           </div>
-        </div>   })
+        </div>   }) 
     }
         </div>
 

@@ -22,7 +22,7 @@
 }
 
 .moreView .cards {
-  height: 30pc;
+  max-height: 30pc;
   overflow-y:scroll;
   overflow-x:hidden;
 }
@@ -108,12 +108,16 @@
   margin-top: 10px;
   font-size: larger;
   font-weight: bold;
+  display: flex;
+  justify-content: flex-end
 }
-.card .content .kilometer {
+.card .content .category {
   font-size: medium;
+  color: green;
 }
 .card .content .name {
-  font-size: small;
+  font-size: large;
+  color: crimson;
 }
 .card .date {
   display: flex;
