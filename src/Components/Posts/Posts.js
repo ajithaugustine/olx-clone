@@ -50,6 +50,7 @@ setproducts(allpost)
           <div className="content">
             <p className="rate">&#x20B9; {product.price}</p>
             <p className="name"> {product.Productname}</p>
+            <p className="category"> {product.category}</p>
           </div>
           <div className="date">
             <span>{product.createdAt}</span>

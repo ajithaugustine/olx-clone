@@ -5,6 +5,7 @@ import { FirebaseContext } from '../../store/Context';
 import {useForm} from 'react-hook-form'
 import * as yup from 'yup'
 import {yupResolver} from '@hookform/resolvers/yup'
+import OlxLogo from '../../assets/OlxLogo';
 import './Signup.css';
 
 export default function Signup() {
@@ -42,6 +43,11 @@ export default function Signup() {
   }
   return (
     <div>
+        <nav class="navbar navbar-light bg-light" >
+      <div className="brandName ml-2" onClick={()=>history.push('/')}>
+          <OlxLogo ></OlxLogo>
+        </div>
+       </nav>
       <div className="signupParentDiv">
         <img width="100px" height="100px" src={Logo}></img>
         <form onSubmit={handleSubmit(signupSubmission) }>

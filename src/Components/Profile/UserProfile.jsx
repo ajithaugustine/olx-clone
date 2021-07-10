@@ -1,13 +1,17 @@
-import React,{useContext,useState} from 'react'
-import { Link,useParams} from 'react-router-dom'
+import React,{useContext,useEffect} from 'react'
+import { Link,useParams,useRouteMatch,Switch,Route} from 'react-router-dom'
 import { AuthContext } from '../../store/Context';
 import Userdetails from './Userdetails'
 import Userproducts from './Userproducts'
 import './UserProfile.css'
 function UserProfile() {
-    const [state, setstate] = useState(true)
-    const {user} = useContext(AuthContext)
-   const {id}=useParams()
+const {user} = useContext(AuthContext)
+const {id}=useParams()
+const {url,path}=useRouteMatch()
+useEffect(() => {
+   window.scroll(0,0)
+  
+}, [])
     return (
         <div >
             <div className="container-fluid">
@@ -16,15 +20,17 @@ function UserProfile() {
                         <h5>{user.displayName}</h5>
                    
                    <ul className='profilelist'>
-                       <li><Link id='profilelinks'onClick={()=>setstate(true)} >userdetails</Link> </li>
-                       <li><Link id='profilelinks' onClick={()=>setstate(false)}>products</Link> </li>
+                       <li><Link id='profilelinks' to={`${url}`} >userdetails</Link> </li>
+                       <li><Link id='profilelinks'to={`${url}/items`} >Items</Link> </li>
                       
                    </ul>
 
                     </div>
                     <div className="contents col-9">
-                   
-                       {state? <div><Userdetails userid={id}/></div> :<div ><Userproducts userid={id} /></div>}
+                  <Switch>
+                      <Route path={`${path}`} exact> <Userdetails userid={id}/></Route>
+                      <Route path={`${path}/items`} > <Userproducts userid={id}/></Route>
+                  </Switch>
                         
                     </div>
 

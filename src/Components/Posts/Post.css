@@ -108,12 +108,15 @@
   margin-top: 10px;
   font-size: larger;
   font-weight: bold;
+  display: flex;
+  justify-content: flex-end
 }
-.card .content .kilometer {
+.card .content .category {
   font-size: medium;
+  color: green;
 }
 .card .content .name {
-  font-size: medium;
+  font-size: large;
   color: crimson;
 }
 .card .date {

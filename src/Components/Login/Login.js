@@ -4,6 +4,7 @@ import Logo from '../../olx-logo.png';
 import './Login.css';
 import { useState,useContext } from 'react';
 import {FirebaseContext} from '../../store/Context'
+import OlxLogo from '../../assets/OlxLogo';
 
 function Login() {
   const [email, setemail] = useState('')
@@ -21,6 +22,11 @@ function Login() {
   }
   return (
     <div>
+      <nav class="navbar navbar-light bg-light" >
+      <div className="brandName ml-2" onClick={()=>history.push('/')}>
+          <OlxLogo ></OlxLogo>
+        </div>
+    </nav>
       <div className="loginParentDiv">
         <img width="100px" height="100px" src={Logo}></img>
         <form onSubmit={Login}>

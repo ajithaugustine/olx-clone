@@ -15,6 +15,19 @@
   align-items: center;
   gap:20px;
 }
+.brandName{
+  cursor: pointer;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  box-shadow: 0px 0px  10px rgb(26, 59, 54);;
+
+}
+.brandName:hover{
+
+  box-shadow: 0px 0px  5px rgb(8, 241, 113);;
+
+
+}
 
 .placeSearch {
   width: 16em;
@@ -127,7 +140,7 @@
 .loginPage h6{
   padding-top: 8px;
   color: #16d1d1;
-  cursor:context-menu;
+  cursor:pointer;
 }
 
 
@@ -192,7 +205,7 @@
   margin-left: 5px;
 }
 
-@media only screen and (max-width: 200px) {
+@media only screen and (max-width: 730px) {
   .placeSearch,
   .productSearch,
   .sellMenu {

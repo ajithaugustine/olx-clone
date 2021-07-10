@@ -21,9 +21,13 @@ useEffect(()=>{
             {
                 userDetails.map((user)=>{
                     return <div>
-            <h6>{user.username}</h6>
-            <h6>{user.phonenumber}</h6> 
-                    </div>
+    
+    <ul className="list-group list-group-flush">
+    <li className="list-group-item text-danger">{user.username}</li>
+    <li className="list-group-item text-success">Phonenuber:{user.phonenumber}</li>
+     </ul>
+</div>
+            
                 } )
             }
            

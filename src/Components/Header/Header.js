@@ -20,12 +20,12 @@ function Header() {
  
   return (
     <div className="headerParentDiv">
-       <div className="brandName">
-          <OlxLogo></OlxLogo>
+       <div className="brandName ml-2" onClick={()=>history.push('/')}>
+          <OlxLogo ></OlxLogo>
         </div>
       <div className="headerChildDiv">
        
-        {/* <div className="placeSearch">
+        <div className="placeSearch">
           <Search></Search>
           <input type="text" />
           <Arrow></Arrow>
@@ -44,7 +44,7 @@ function Header() {
         <div className="language">
           <span> ENGLISH </span>
           <Arrow></Arrow> 
-        </div> */}
+        </div>
       
         <div className="loginPage">
           {user ?<Link to={`/profile/${user.uid}`}><h6>{user.displayName}</h6></Link> :<Link to='/login'>Login</Link> }
