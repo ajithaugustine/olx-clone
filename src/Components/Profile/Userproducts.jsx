@@ -35,7 +35,6 @@ setupdate('updated')
         <div>
             <h6 className='font-italic'>sell items</h6>
           <div className="moreView1">
-
             <div className="cards row ">
     {
       products.map((product)=>{

@@ -29,9 +29,9 @@ function App() {
       <Route path='/signup'> <Signup/> </Route>
       <Route path='/sell' component={Create}/>
       <Route path='/view'> <ViewPost/> </Route>
-     {user? <Route path='/profile/:id'><Profile/> </Route> :<Redirect to="/"/>}
-     {user?  <Route path='/edit/:itemid'><Editpost/> </Route>:<Redirect to="/"/>}
-      <Route path='*' > <h3>page not fount</h3> </Route>
+      <Route path='/profile/:id'>{user?<Profile/> :<Redirect to="/"/>}</Route> 
+      <Route path='/edit/:itemid'> {user?<Editpost/> :<Redirect to="/"/>}</Route>
+      <Route > <h3>page not fount</h3></Route>
       </Switch>
       </BrowserRouter>
       </Post>

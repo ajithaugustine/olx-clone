@@ -1,17 +1,25 @@
 import React ,{useEffect,useState,useContext}from 'react';
 import { FirebaseContext } from '../../store/Context';
 import { PostContext } from '../../store/PostContext';
+import{useHistory} from 'react-router-dom'
 
 import './View.css';
 function View() {
+  const history=useHistory()
   const [userDetails, setuserDetails] = useState()
   const {postdetailes} = useContext(PostContext)
   const {firebase} = useContext(FirebaseContext)
   useEffect(()=>{
       const {userId}= postdetailes
+      if(postdetailes ===''){
+       console.log('ath pattathilla ketto')
+       history.push('/')
+      }
+     else{
       firebase.firestore().collection('user').where('id','==',userId).get().then((res)=>{
         res.forEach(doc => {setuserDetails(doc.data())});
       })
+     }
 
   },[])
   return (

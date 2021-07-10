@@ -1,16 +1,16 @@
 .loginParentDiv {
     border: 1px solid black;
-    width: max-content;
     padding: 10px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 6px;
-    z-index: 2;
+    width: 20pc;
+  
   }
   .loginParentDiv img{
-    margin-left: 2.3pc;
+    margin-left: 6pc;
   }
 
   
@@ -19,6 +19,7 @@
     border-left-color: transparent;
     border-right-color: transparent;
     outline-color: transparent;
+    width: 100%;
   }
   
   .loginParentDiv button {
