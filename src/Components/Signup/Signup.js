@@ -57,7 +57,7 @@ export default function Signup() {
             className="input"
             type="text"
            {...register('username')}
-           placeholder="Enter User"
+           placeholder="Username"
           />
           <br />
           {errors.username?.message && <small>{errors.username?.message}</small>}<br/>
@@ -67,7 +67,7 @@ export default function Signup() {
             className="input"
             type="email"         
             {...register('email')}
-            placeholder="Enter Email"
+            placeholder="email"
        
           />
           <br />

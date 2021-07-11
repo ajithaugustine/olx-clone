@@ -20,7 +20,7 @@ function Login() {
     firebase
       .auth()
       .signInWithEmailAndPassword(email, password)
-      .then((res) => {
+      .then(() => {
         setloading(false)
         seterror('')
        setsuccess("success")

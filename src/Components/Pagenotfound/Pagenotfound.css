@@ -10,9 +10,12 @@
     height: 400px;
     background-position: center;
  }
-.box{
-margin-left:10pc;
-}
+
+ .box{
+    margin-left: 10pc;
+ }
+
+
  
  
  .four_zero_four_bg h1{
@@ -27,6 +30,6 @@ margin-left:10pc;
   color: #fff!important;
     padding: 10px 20px;
     background: #39ac31;
-    margin: 20px 0;
+   
     display: inline-block;}
   .contant_box_404{ margin-top:-50px;}
