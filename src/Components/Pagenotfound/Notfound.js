@@ -4,7 +4,7 @@ import './Pagenotfound.css'
 function Notfound() {
     return (
         <div>
-        <div className="">
+        <div className="box">
 
          <section class="page_404">
   <div class="container">
