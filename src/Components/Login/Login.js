@@ -22,6 +22,7 @@ function Login() {
       .signInWithEmailAndPassword(email, password)
       .then((res) => {
         setloading(false)
+        seterror('')
        setsuccess("success")
        setTimeout(() => {
          history.push("/")
