@@ -14,7 +14,7 @@ export default function Signup() {
   const schema = yup.object().shape({
     username: yup.string().required('Username is Required').trim().min(4,'name of min 4 letter'),
     email:yup.string().required('Email is required').email('Invalid email'),
-    number:yup.string().required('Enter contact number'),
+    number:yup.string().required('Enter contact number').min(10,'invalid number').max(10),
     password:yup.string().required('Password is required').min(6,'min 6 char required').max(15)
   });
   const { register, handleSubmit, formState: { errors }} = useForm({
@@ -57,7 +57,7 @@ export default function Signup() {
             className="input"
             type="text"
            {...register('username')}
-           placeholder="Enter User"
+           placeholder="Username"
           />
           <br />
           {errors.username?.message && <small>{errors.username?.message}</small>}<br/>
@@ -67,7 +67,7 @@ export default function Signup() {
             className="input"
             type="email"         
             {...register('email')}
-            placeholder="Enter Email"
+            placeholder="Email"
        
           />
           <br />

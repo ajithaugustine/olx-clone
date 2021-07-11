@@ -20,7 +20,7 @@ function Login() {
     firebase
       .auth()
       .signInWithEmailAndPassword(email, password)
-      .then((res) => {
+      .then(() => {
         setloading(false)
         seterror('')
        setsuccess("success")
@@ -52,7 +52,7 @@ function Login() {
             onChange={(e) => setemail(e.target.value)}
             id="fname"
             name="email"
-            placeholder="John"
+            placeholder="Email"
             required
           />
           <br />
@@ -65,7 +65,7 @@ function Login() {
             onChange={(e) => setpassword(e.target.value)}
             id="lname"
             name="password"
-            placeholder="Doe"
+            placeholder="Password"
             required
             minLength='6'
           />
