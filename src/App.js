@@ -10,6 +10,7 @@ import ViewPost from './Pages/ViewPost';
 import Post from './store/PostContext'
 import Profile from './Pages/Profile';
 import Editpost from './Components/Editpost/Editpost';
+import Notfound from './Components/Pagenotfound/Notfound';
 function App() {
   const{user,setuser} = useContext(AuthContext)
   const {firebase} = useContext(FirebaseContext)
@@ -31,7 +32,7 @@ function App() {
       <Route path='/view'> <ViewPost/> </Route>
       <Route path='/profile/:id'>{user?<Profile/> :<Redirect to="/"/>}</Route> 
       <Route path='/edit/:itemid'> {user?<Editpost/> :<Redirect to="/"/>}</Route>
-      <Route > <h3>page not fount</h3></Route>
+      <Route > <Notfound/></Route>
       </Switch>
       </BrowserRouter>
       </Post>

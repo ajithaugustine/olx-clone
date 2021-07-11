@@ -12,7 +12,7 @@ export default function Signup() {
   const history = useHistory()
   const {firebase} = useContext(FirebaseContext)
   const schema = yup.object().shape({
-    username: yup.string().required('Username is Required'),
+    username: yup.string().required('Username is Required').trim().min(4,'name of min 4 letter'),
     email:yup.string().required('Email is required').email('Invalid email'),
     number:yup.string().required('Enter contact number'),
     password:yup.string().required('Password is required').min(6,'min 6 char required').max(15)
