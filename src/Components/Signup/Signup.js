@@ -67,7 +67,7 @@ export default function Signup() {
             className="input"
             type="email"         
             {...register('email')}
-            placeholder="Email"
+            placeholder="email"
        
           />
           <br />
